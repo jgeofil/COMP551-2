@@ -2,6 +2,8 @@
 
 import numpy as np
 import processing as pr
+import pandas as pd
+import NB
 from sklearn.linear_model import LogisticRegression
 import argparse
 
@@ -29,8 +31,17 @@ class Runner():
         self.prcs.submit(y_fp,self.finalSub + '-LR.csv')
 
     def naiveBayes(self):
-        ## call code by jgeof
-        pass
+        print 'Predicting naiveBayes'
+        trainX = np.array(pd.read_csv(TRAIN_IN, quotechar='"', header=0))
+        trainY = np.array(pd.read_csv(TRAIN_OUT, quotechar='"', header=0))
+        test = np.array(pd.read_csv(TEST_IN, quotechar='"', header=0))
+        nb = NB.NaiveB()
+        nb.train(trainX, trainY)
+        print 'Predicting test file'
+        arg = nb.predict(test)
+        out = pd.DataFrame(columns=['id', 'category'])
+        out['id'], out['category'] = arg.index, arg
+        out.to_csv(self.finalSub + '-NB.csv',index=False)
 
     def knn(self):
         ## call code by terry
