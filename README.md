@@ -35,6 +35,6 @@ K Nearest Neighbors implementation was done in R so use
 
 ## Authors
 
-[Jeremy Georges-Filteau](https://github.com/jgeofil) - McGill ID : 260713547, _jeremy.georges-filteau@mail.mcgill.ca_
-[Yu Luo](https://github.com/yumcgill) - McGill ID : 260605878, _yu.t.luo@mail.mcgill.ca_
-[Koustuv Sinha](https://github.com/koustuvsinha) - McGill ID: 260721248, _koustuv.sinha@mail.mcgill.ca_
+- [Jeremy Georges-Filteau](https://github.com/jgeofil) - McGill ID : 260713547, _jeremy.georges-filteau@mail.mcgill.ca_
+- [Yu Luo](https://github.com/yumcgill) - McGill ID : 260605878, _yu.t.luo@mail.mcgill.ca_
+- [Koustuv Sinha](https://github.com/koustuvsinha) - McGill ID: 260721248, _koustuv.sinha@mail.mcgill.ca_
