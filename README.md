@@ -10,7 +10,7 @@ The entry point of the program is [runner.py](src/runner.py), where all the
 applications can be run by these simple flags :
 
 ```
-usage: runner.py [-h] [-s SUBMISSION] [-lr] [-nv] [-sgd] [-rand] [-erf] [-bag]
+usage: runner.py [-h] [-lr] [-nv] [-sgd] [-rand] [-erf] [-bag]
                  [-vot] [-ada] [-svm]
 
 optional arguments:
