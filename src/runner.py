@@ -60,9 +60,9 @@ class Runner():
 
 
     def runClassifications(self,estimatorDict):
-        for estimatorName,estimator in estimatorDict:
+        for estimatorName in estimatorDict:
             print estimatorName
-            clf = estimator
+            clf = estimatorDict[estimatorName]
             if args.svm:
                 clf.fit(self.chi.X_train,self.prcs.y_train)
                 yp = clf.predict(self.chi.X_test)
