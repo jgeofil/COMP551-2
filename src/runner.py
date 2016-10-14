@@ -43,7 +43,7 @@ class Runner():
             self.selectChiBest(1000)
             estimatorDict['LinearSVM'] = LinearSVC()
 
-        self.runClassifications()
+        self.runClassifications(estimatorDict)
 
     def naiveBayes(self):
         print 'Predicting naiveBayes'
