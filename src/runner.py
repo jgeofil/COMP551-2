@@ -14,13 +14,13 @@ from sklearn.feature_selection import SelectKBest,chi2
 from sklearn.svm import LinearSVC
 import argparse
 
-TRAIN_IN = '../data/train_in.csv'
-TRAIN_OUT = '../data/train_out.csv'
-TEST_IN = '../data/test_in.csv'
+TRAIN_IN = 'data/train_in.csv'
+TRAIN_OUT = 'data/train_out.csv'
+TEST_IN = 'data/test_in.csv'
 
 class Runner():
-    def __init__(self,finalSubmission='submission',args=None):
-        self.finalSub = finalSubmission
+    def __init__(self,args=None):
+        self.finalSub = 'submission'
         self.prcs = pr.Process(trainInFile=TRAIN_IN,trainOutFile=TRAIN_OUT,testFile=TEST_IN)
         if args.naive:
             self.naiveBayes()
@@ -103,7 +103,5 @@ if __name__ == '__main__':
     parser.add_argument('-ada','--adaboost',help='Adaboost',action='store_true')
     parser.add_argument('-svm','--svm',help='Linear SVM',action='store_true')
     args = parser.parse_args()
-    if args.submission:
-        Runner(submission=args.submission,args=args)
-    else:
-        Runner(None,args=args)
+    # Run the classifications
+    Runner(args=args)

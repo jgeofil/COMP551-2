@@ -15,8 +15,6 @@ usage: runner.py [-h] [-s SUBMISSION] [-lr] [-nv] [-sgd] [-rand] [-erf] [-bag]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -s SUBMISSION, --submission SUBMISSION
-                        Submission File
   -lr, --logistic       logistic Regression
   -nv, --naive          Naive Bayes
   -sgd, --sgdclassifier
