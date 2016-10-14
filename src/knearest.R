@@ -2,9 +2,9 @@ library(tm)
 library(class)
 library(plyr)
 library(SnowballC)
-train_in <- read.csv("datasets/train_in.csv",stringsAsFactors = FALSE)
-train_out<- read.csv("datasets/train_out.csv")
-test_in <- read.csv("datasets/test_in.csv")
+train_in <- read.csv("data/train_in.csv",stringsAsFactors = FALSE)
+train_out<- read.csv("data/train_out.csv")
+test_in <- read.csv("datas/test_in.csv")
 table(train_out$category)
 train_in<-train_in[,2]
 test_in<-test_in[,2]
@@ -49,7 +49,7 @@ kdistance<-function(x,X,k,y){
 train_out<-train_out[-b,]
 train_out$category<-factor(train_out$category)
 
-###k-fold cross validation 
+###k-fold cross validation
 
 cvk<-function(X,m,k,y){
   max<-ceiling(ncol(X)/m)
